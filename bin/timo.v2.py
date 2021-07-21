@@ -1,4 +1,3 @@
-#!/usr/bin/env python3
 from __future__ import print_function
 
 import sys,os,glob
@@ -416,9 +415,11 @@ if __name__ == '__main__': #this will allow this module to be imported from anot
     ##################### USER DEFINED ########################
         # MAKE SURE THE / IS AT THE END OF FULLVARLIST_DIR!!!
     FULLVARLIST_DIR = 'FILES/fullvarlist/' #change output 8/30/2017
+    # change on 07.21.2021 by KJ
+    os.makedirs(FULLVARLIST_DIR, exist_ok = True)
     # ensure_dir('../FILES/consensus/')
-    ensure_dir('FILES/') #I don't think you can make a subdirectory without making the parent directory first 8/30/2017
-    ensure_dir(FULLVARLIST_DIR) #this looks for the already made directory, and if not made then it makes it on its own
+    #ensure_dir('FILES/') #I don't think you can make a subdirectory without making the parent directory first 8/30/2017
+    #ensure_dir(FULLVARLIST_DIR) #this looks for the already made directory, and if not made then it makes it on its own
     bampath = '../FILES/bamfiles/' #specify the path and it will go in and do a batch file
     ##########################################
 
